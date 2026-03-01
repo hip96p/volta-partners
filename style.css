@@ -244,9 +244,12 @@
 .nav__logo-mark {
   font-family: var(--font-logo);
   font-weight: 900;
-  font-size: clamp(1.25rem, 1rem + 0.5vw, 1.5rem);
+  font-size: clamp(0.875rem, 0.75rem + 0.3vw, 1rem);
   letter-spacing: -0.03em;
-  color: var(--color-text);
+  color: #FFFFFF;
+  background: var(--color-primary);
+  padding: 0.35em 0.45em;
+  border-radius: var(--radius-sm);
   line-height: 1;
 }
 

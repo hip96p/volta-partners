@@ -37,8 +37,9 @@
    VOLTA PARTNERS — LIGHT MODE PALETTE
    ============================================ */
 :root, [data-theme="light"] {
-  --font-display: 'Playfair Display', 'Georgia', serif;
-  --font-body: 'Inter', 'Helvetica Neue', sans-serif;
+  --font-logo: 'Archivo Black', sans-serif;
+  --font-display: 'Archivo', -apple-system, system-ui, sans-serif;
+  --font-body: 'Inter', -apple-system, system-ui, sans-serif;
 
   --color-bg:               #FAFAFA;
   --color-surface:          #FFFFFF;
@@ -54,18 +55,18 @@
   --color-text-faint:  #A0A7AE;
   --color-text-inverse:#FAFAFA;
 
-  --color-primary:           #0A7E6A;
-  --color-primary-hover:     #06614F;
-  --color-primary-active:    #044A3C;
-  --color-primary-highlight: #D0E8E3;
+  --color-primary:           #09814A;
+  --color-primary-hover:     #067039;
+  --color-primary-active:    #045C2E;
+  --color-primary-highlight: #D0E8D9;
 
   --color-secondary:           #0078A1;
   --color-secondary-hover:     #005F80;
   --color-secondary-active:    #004A65;
   --color-secondary-highlight: #D0E4ED;
 
-  --color-charcoal:      #2D3E4A;
-  --color-charcoal-light:#3A5060;
+  --color-charcoal:      #37515F;
+  --color-charcoal-light:#4A6575;
 
   --color-success:        #437a22;
   --color-warning:        #964219;
@@ -107,10 +108,10 @@
   --color-text-faint:  #576068;
   --color-text-inverse:#1A1A1A;
 
-  --color-primary:           #3AAFA0;
-  --color-primary-hover:     #2A9488;
-  --color-primary-active:    #1F7A6F;
-  --color-primary-highlight: #1E3A35;
+  --color-primary:           #3AAF78;
+  --color-primary-hover:     #2A9468;
+  --color-primary-active:    #1F7A58;
+  --color-primary-highlight: #1E3A2D;
 
   --color-secondary:           #4DA8C8;
   --color-secondary-hover:     #3690B0;
@@ -143,10 +144,10 @@
     --color-text-muted: #8A94A0;
     --color-text-faint: #576068;
     --color-text-inverse: #1A1A1A;
-    --color-primary: #3AAFA0;
-    --color-primary-hover: #2A9488;
-    --color-primary-active: #1F7A6F;
-    --color-primary-highlight: #1E3A35;
+    --color-primary: #3AAF78;
+    --color-primary-hover: #2A9468;
+    --color-primary-active: #1F7A58;
+    --color-primary-highlight: #1E3A2D;
     --color-secondary: #4DA8C8;
     --color-secondary-hover: #3690B0;
     --color-secondary-active: #267898;
@@ -241,17 +242,11 @@
 }
 
 .nav__logo-mark {
-  width: 36px;
-  height: 36px;
-  background: var(--color-primary);
-  border-radius: var(--radius-sm);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--color-text-inverse);
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: var(--text-sm);
+  font-family: var(--font-logo);
+  font-weight: 900;
+  font-size: clamp(1.25rem, 1rem + 0.5vw, 1.5rem);
+  letter-spacing: -0.03em;
+  color: var(--color-text);
   line-height: 1;
 }
 
@@ -286,7 +281,7 @@
 }
 
 .nav__links a:hover {
-  color: var(--color-text);
+  color: var(--color-primary);
 }
 
 .nav__actions {
@@ -356,7 +351,7 @@
 .mobile-menu a {
   font-family: var(--font-display);
   font-size: var(--text-xl);
-  font-weight: 400;
+  font-weight: 600;
   color: var(--color-text);
   text-decoration: none;
   transition: color var(--transition-interactive);
@@ -403,6 +398,7 @@
   font-weight: 700;
   color: var(--color-text);
   line-height: 1.08;
+  letter-spacing: -0.02em;
   margin-bottom: var(--space-6);
   max-width: 18ch;
 }
@@ -562,6 +558,7 @@
   font-size: var(--text-2xl);
   font-weight: 700;
   color: var(--color-text);
+  letter-spacing: -0.02em;
   margin-bottom: var(--space-4);
   max-width: 20ch;
 }
@@ -789,6 +786,7 @@
   font-size: var(--text-lg);
   font-weight: 700;
   color: var(--color-text);
+  letter-spacing: -0.02em;
   margin-bottom: var(--space-3);
   line-height: 1.25;
 }
@@ -805,12 +803,12 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--space-10);
+  max-width: var(--content-narrow);
 }
 
 @media (min-width: 768px) {
   .contact-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: var(--space-16);
+    max-width: var(--content-narrow);
   }
 }
 
